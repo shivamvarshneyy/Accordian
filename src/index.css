@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(255, 254, 254);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.main-div{
+    background-color: azure;
+    padding: 0.5rem;
+    gap: 0.5rem;
+    width: 80vw;
+    height: inherit;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    justify-content: center;
+    min-width: 70vw;
+    margin: auto;
+}
+
+.main-div .heading{
+    display: flex;
+    justify-content: center;
+}
+
+
+.box{
+    background-color: rgb(205, 205, 205);
+    padding: 0.2rem;
+    border-radius: 0.4rem;
+}
