@@ -3,18 +3,16 @@ import { FiPlusCircle, FiMinusCircle } from "react-icons/fi"
 
 
 
-const Accordian = ({key, question, answer}) => {
-  const [toggle, setToggle] = useState(false);
+const Accordian = ({question, answer, onToggle, isActive}) => {
 
-  const handleToggle = () => {
-    setToggle(!toggle);
-  }
   return (
     <>
+    <li>
         <div className="box">
-            <p style={{justifyContent:'center' }} onClick={handleToggle}>{toggle?<FiMinusCircle/>:<FiPlusCircle />}{question}</p>
-            {toggle && <p className='answer'>{answer}</p>}
-        </div>
+            <p style={{justifyContent:'center' }} onClick={onToggle}>{isActive?<FiMinusCircle/>:<FiPlusCircle />}{question}</p>
+            <p className='answer'>{isActive && answer}</p>
+      </div>
+    </li>
     </>
   )
 }
